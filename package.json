@@ -1,7 +1,7 @@
 {
-  "name": "@ckeditor/ckeditor5-build-classic",
+  "name": "@haifahrul/ckeditor5-build-rich",
   "version": "18.0.0",
-  "description": "The classic editor build of CKEditor 5 – the best browser-based rich text editor.",
+  "description": "Custom (Add extra plugins). The classic editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
     "ckeditor",
@@ -18,7 +18,10 @@
     "collaboration",
     "collaborative",
     "real-time",
-    "framework"
+    "framework",
+    "haifahrul",
+    "haifahrul ckeditor-build-rich",
+    "ckeditor rich plugins"
   ],
   "main": "./build/ckeditor.js",
   "files": [
@@ -75,10 +78,12 @@
   "author": "CKSource (http://cksource.com/)",
   "license": "GPL-2.0-or-later",
   "homepage": "https://ckeditor.com/ckeditor-5",
-  "bugs": "https://github.com/ckeditor/ckeditor5/issues",
+  "bugs": {
+    "url": "https://github.com/ckeditor/ckeditor5/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5-build-classic.git"
+    "url": "git+https://github.com/haifahrul/ckeditor5-build-rich.git"
   },
   "scripts": {
     "build": "webpack --mode production",
@@ -102,5 +107,9 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {}
 }
