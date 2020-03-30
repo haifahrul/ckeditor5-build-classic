@@ -138,7 +138,7 @@ ClassicEditor.defaultConfig = {
 			'highlight',
 			'|',
 			'link',
-			'CKFinder',
+			'ckfinder',
 			'imageUpload',
 			'mediaEmbed',
 			'|',
