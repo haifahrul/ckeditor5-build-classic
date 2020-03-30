@@ -30,6 +30,35 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
+import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
+import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
+import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
+import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
+import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
+import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
+import MediaEmbedToolbar from '@ckeditor/ckeditor5-media-embed/src/mediaembedtoolbar';
+import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak';
+import SpecialCharacters from '@ckeditor/ckeditor5-special-characters/src/specialcharacters';
+import SpecialCharactersEssentials from '@ckeditor/ckeditor5-special-characters/src/specialcharactersessentials';
+import SpecialCharactersArrows from '@ckeditor/ckeditor5-special-characters/src/specialcharactersarrows';
+import SpecialCharactersCurrency from '@ckeditor/ckeditor5-special-characters/src/specialcharacterscurrency';
+import SpecialCharactersMathematical from '@ckeditor/ckeditor5-special-characters/src/specialcharactersmathematical';
+import SpecialCharactersLatin from '@ckeditor/ckeditor5-special-characters/src/specialcharacterslatin';
+import SpecialCharactersText from '@ckeditor/ckeditor5-special-characters/src/specialcharacterstext';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
+import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
+import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
+import Title from '@ckeditor/ckeditor5-heading/src/title';
+import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
+
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
@@ -56,47 +85,91 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+
+	Italic,
+	EasyImage,
+	Alignment,
+	Code,
+	CodeBlock,
+	FontFamily,
+	FontSize,
+	FontColor,
+	FontBackgroundColor,
+	Highlight,
+	HorizontalLine,
+	ImageResize,
+	IndentBlock,
+	MediaEmbedToolbar,
+	PageBreak,
+	SpecialCharacters,
+	SpecialCharactersEssentials,
+	SpecialCharactersArrows,
+	SpecialCharactersCurrency,
+	SpecialCharactersMathematical,
+	SpecialCharactersLatin,
+	SpecialCharactersText,
+	Strikethrough,
+	Subscript,
+	Superscript,
+	TableCellProperties,
+	Title,
+	TableProperties,
+	Underline,
+	WordCount
 ];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
+			'undo',
+			'redo',
+			'|',
 			'heading',
+			'fontFamily',
+			'fontSize',
 			'|',
 			'bold',
 			'italic',
+			'underline',
+			'fontColor',
+			'fontBackgroundColor',
+			'highlight',
+			'|',
 			'link',
+			'CKFinder',
+			'imageUpload',
+			'mediaEmbed',
+			'|',
+			'alignment',
 			'bulletedList',
 			'numberedList',
 			'|',
 			'indent',
 			'outdent',
 			'|',
-			'imageUpload',
-			'blockQuote',
 			'insertTable',
-			'mediaEmbed',
-			'undo',
-			'redo'
+			'blockQuote',
+			'specialCharacters'
 		]
 	},
 	image: {
 		toolbar: [
+			'imageTextAlternative',
 			'imageStyle:full',
-			'imageStyle:side',
-			'|',
-			'imageTextAlternative'
+			'imageStyle:side'
 		]
 	},
 	table: {
 		contentToolbar: [
 			'tableColumn',
 			'tableRow',
-			'mergeTableCells'
+			'mergeTableCells',
+			'tableCellProperties',
+			'tableProperties'
 		]
 	},
-	// This value must be kept in sync with the language defined in webpack.config.js.
+	// This value must be kept in sync with the language defined in webpack.config.
 	language: 'en'
 };
